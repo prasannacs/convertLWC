@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Coverter" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <p>Currency Converter</p>
+
+            <lightning-input label="Input Unit" value={input} onchange={inputchangeHandler}></lightning-input>
+
+            <lightning-combobox name="input" label="Input Currency" value={input_cur_value}
+                placeholder="Select Progress" options={input_cur_options} onchange={handleInputCurChange}>
+            </lightning-combobox>
+            <p>Input Currency is: {input_cur_value}</p>
+
+            <lightning-combobox name="output" label="Output Currency" value={output_cur_value}
+                placeholder="Select Progress" options={output_cur_options} onchange={handleOutputCurChange}>
+            </lightning-combobox>
+            <p>Output Currency is: {output_cur_value}</p>
+
+            <lightning-button title="Currency Conversion" 
+                                      label="Conversion Rate" 
+                                      variant="brand" 
+                                      onclick={handleCurrencyConversion}></lightning-button>
+            <lightning-input label="Coenverted Value" value={convert} onchange={changeHandler}></lightning-input>
+        </div>
+    </lightning-card>
+</template>
